@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:loadBundle basename="dcoms.mobile.ViewControllerBundle" var="viewcontrollerBundle" id="lb1"/>
+  <amx:panelPage id="pp1">
+    <amx:facet name="header">
+      <amx:outputText value="#{viewcontrollerBundle.SEARCH_LOT_NUMBER}" id="ot1"/>
+    </amx:facet>
+    <amx:facet name="primary">
+      <amx:commandButton id="cb1" text="#{viewcontrollerBundle.CANCEL}"/>
+    </amx:facet>
+    <amx:facet name="secondary">
+      <amx:inputText value="#{bindings.lotNum.inputValue}" simple="true" id="it1"
+                     label="#{viewcontrollerBundle.LOT__NUMBER}"/>
+      <amx:commandButton actionListener="#{bindings.invokeWS.execute}" text="#{viewcontrollerBundle.SEARCH}"
+                         disabled="#{!bindings.invokeWS.enabled}" id="cb3"/>
+      <amx:listView var="row" value="#{bindings.allLot.collectionModel}" fetchSize="#{bindings.allLot.rangeSize}"
+                  selectedRowKeys="#{bindings.allLot.collectionModel.selectedRow}"
+                  selectionListener="#{bindings.allLot.collectionModel.makeCurrent}" dividerAttribute="lotNum"
+                  dividerMode="all" showMoreStrategy="autoScroll" bufferStrategy="viewport" id="lv1">
+      <amx:listItem id="li1">
+        <amx:tableLayout id="tl1">
+          <amx:rowLayout id="rl1">
+            <amx:cellFormat id="cf1">
+              <amx:outputText value="#{row.lotNum}" id="ot3"/>
+            </amx:cellFormat>
+          </amx:rowLayout>
+          <amx:rowLayout id="rl2">
+            <amx:cellFormat id="cf21">
+              <amx:outputText value="#{row.item}" id="ot34"/>
+            </amx:cellFormat>
+          </amx:rowLayout>
+        </amx:tableLayout>
+      </amx:listItem>
+    </amx:listView>
+    </amx:facet>
+  </amx:panelPage>
+</amx:view>

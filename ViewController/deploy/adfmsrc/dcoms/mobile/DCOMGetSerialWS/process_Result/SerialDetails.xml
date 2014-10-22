@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="12.1.3.2.36" id="SerialDetails"
+          Package="dcoms.mobile.DCOMGetSerialWS.process_Result"
+          BeanClass="dcoms.mobile.DCOMGetSerialWS.process_Result.SerialDetails" isJavaBased="false">
+  <AccessorAttribute id="Serial" IsCollection="true"
+                     BeanClass="dcoms.mobile.DCOMGetSerialWS.process_Result.SerialDetails.Serial"
+                     CollectionBeanClass="dcoms.mobile.DCOMGetSerialWS.process_Result.SerialDetails_Operations"/>
+</JavaBean>

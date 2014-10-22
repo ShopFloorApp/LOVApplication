@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="12.1.3.2.36" id="Item_Operations"
+          Package="dcoms.mobile.ItemWS.process_Result.ItemList"
+          BeanClass="dcoms.mobile.ItemWS.process_Result.ItemList.Item_Operations" isJavaBased="false">
+  <BuiltinOperation id="First"/>
+  <BuiltinOperation id="Next"/>
+  <BuiltinOperation id="Previous"/>
+  <BuiltinOperation id="Last"/>
+  <BuiltinOperation id="setCurrentRowWithKey"/>
+  <BuiltinOperation id="setCurrentRowWithKeyValue"/>
+</JavaBean>

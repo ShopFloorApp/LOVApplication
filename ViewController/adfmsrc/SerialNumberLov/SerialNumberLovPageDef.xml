@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.9.1" id="SerialNumberLovPageDef"
+                Package="SerialNumberLov">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="SerialLovDC" id="SerialLovDCIterator"/>
+    <accessorIterator MasterBinding="SerialLovDCIterator" Binds="allSerials" RangeSize="25" DataControl="SerialLovDC"
+                      BeanClass="dcoms.mobile.serialLov.SerialBean" id="allSerialsIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="SerialLovDCIterator" id="serialNum">
+      <AttrNames>
+        <Item Value="serialNum"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="allSerialsIterator" id="allSerials">
+      <nodeDefinition DefName="dcoms.mobile.serialLov.SerialBean" Name="allSerials0">
+        <AttrNames>
+          <Item Value="serialNum"/>
+          <Item Value="item"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <methodAction id="invokeWS" RequiresUpdateModel="true" Action="invokeMethod" MethodName="invokeWS"
+                  IsViewObjectMethod="false" DataControl="SerialLovDC" InstanceName="data.SerialLovDC.dataProvider"/>
+  </bindings>
+</pageDefinition>

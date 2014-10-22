@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.2.36" id="LotLovPGPageDef"
+                Package="dcoms.mobile.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="LotLovDC" id="LotLovDCIterator"/>
+    <accessorIterator MasterBinding="LotLovDCIterator" Binds="allLot" RangeSize="25" DataControl="LotLovDC"
+                      BeanClass="dcoms.mobile.lotLov.LotBean" id="allLotIterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="invokeWS" RequiresUpdateModel="true" Action="invokeMethod" MethodName="invokeWS"
+                  IsViewObjectMethod="false" DataControl="LotLovDC" InstanceName="data.LotLovDC.dataProvider"/>
+    <attributeValues IterBinding="LotLovDCIterator" id="lotNum">
+      <AttrNames>
+        <Item Value="lotNum"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="allLotIterator" id="allLot">
+      <nodeDefinition DefName="dcoms.mobile.lotLov.LotBean" Name="allLot0">
+        <AttrNames>
+          <Item Value="action"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

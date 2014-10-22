@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.2.36" id="WarehouseLovPGPageDef"
+                Package="WarehouseLov">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="WarehouseLovDC" id="WarehouseLovDCIterator"/>
+    <accessorIterator MasterBinding="WarehouseLovDCIterator" Binds="orgs" RangeSize="25" DataControl="WarehouseLovDC"
+                      BeanClass="dcoms.mobile.whsLov.WarehouseBean" id="orgsIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="WarehouseLovDCIterator" id="org_code">
+      <AttrNames>
+        <Item Value="org_code"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="orgsIterator" id="orgs">
+      <nodeDefinition DefName="dcoms.mobile.whsLov.WarehouseBean" Name="orgs0">
+        <AttrNames>
+          <Item Value="org_code"/>
+          <Item Value="org_name"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <methodAction id="invokeWS" RequiresUpdateModel="true" Action="invokeMethod" MethodName="invokeWS"
+                  IsViewObjectMethod="false" DataControl="WarehouseLovDC"
+                  InstanceName="data.WarehouseLovDC.dataProvider"/>
+  </bindings>
+</pageDefinition>

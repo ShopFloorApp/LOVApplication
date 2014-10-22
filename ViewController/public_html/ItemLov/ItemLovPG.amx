@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:loadBundle basename="dcoms.mobile.ViewControllerBundle" var="viewcontrollerBundle" id="lb1"/>
+  <amx:panelPage id="pp1">
+    <amx:facet name="header">
+      <amx:outputText value="#{viewcontrollerBundle.SEARCH_ITEM_NUMBER}" id="ot1"/>
+    </amx:facet>
+    <amx:facet name="primary">
+      <amx:commandButton text ="#{viewcontrollerBundle.CANCEL}" id="cb1" action="__back"/>
+    </amx:facet>
+    <amx:facet name="secondary">
+      <amx:commandButton text = "#{viewcontrollerBundle.HOME}" id="cb2"/>
+    </amx:facet>
+    <amx:inputText value="#{bindings.itemNum.inputValue}" label = "#{viewcontrollerBundle.ITEM_NUMBER}" simple="true" id="it1"/>
+    <amx:commandButton actionListener="#{bindings.invokeWS.execute}" 
+                       disabled="#{!bindings.invokeWS.enabled}"  text = "#{viewcontrollerBundle.SEARCH}" id="cb4"/>
+    <amx:listView var="row" value="#{bindings.items.collectionModel}" fetchSize="#{bindings.items.rangeSize}"
+                  selectedRowKeys="#{bindings.items.collectionModel.selectedRow}"
+                  selectionListener="#{bindings.items.collectionModel.makeCurrent}" showMoreStrategy="autoScroll"
+                  bufferStrategy="viewport" id="lv1">
+      <amx:listItem id="li1">
+        <amx:outputText value="#{row.itemNum}" id="ot2"/>
+      </amx:listItem>
+    </amx:listView>
+  </amx:panelPage>
+</amx:view>

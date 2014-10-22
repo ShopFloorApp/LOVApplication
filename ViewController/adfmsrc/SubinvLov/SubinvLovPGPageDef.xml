@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.2.36" id="SubinvLovPGPageDef"
+                Package="SubinvLov">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="SubinvLovDC" id="SubinvLovDCIterator"/>
+    <accessorIterator MasterBinding="SubinvLovDCIterator" Binds="subinv" RangeSize="25" DataControl="SubinvLovDC"
+                      BeanClass="dcoms.mobile.subinvLov.SubinvBean" id="subinvIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="SubinvLovDCIterator" id="subinvCode">
+      <AttrNames>
+        <Item Value="subinvCode"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="invokeWS" RequiresUpdateModel="true" Action="invokeMethod" MethodName="invokeWS"
+                  IsViewObjectMethod="false" DataControl="SubinvLovDC" InstanceName="data.SubinvLovDC.dataProvider"/>
+    <tree IterBinding="subinvIterator" id="subinv">
+      <nodeDefinition DefName="dcoms.mobile.subinvLov.SubinvBean" Name="subinv0">
+        <AttrNames>
+          <Item Value="subinv_code"/>
+          <Item Value="subinv_desc"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

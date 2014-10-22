@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.deloitte.com/DCOM/SerialNumber/DCOMGetSerial" targetNamespace="http://www.deloitte.com/DCOM/SerialNumber/DCOMGetSerial" xmlns:cmn="http://www.deloitte.com/DCOM/Common" elementFormDefault="qualified">
+  <xsd:import namespace="http://www.deloitte.com/DCOM/Common" schemaLocation="CommonXSD.xsd"/>
+  <xsd:element name="getSerialProcess">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="TransactionHeader" maxOccurs="1" minOccurs="1" type="cmn:TransactionHeaderType"/>
+        <xsd:element name="Whse" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+        <xsd:element name="Item" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+        <xsd:element name="SerialNum" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+        <xsd:element name="SerialCount" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+        <xsd:element name="Subinv" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+        <xsd:element name="Locator" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+        <xsd:element name="Action" type="xsd:string" maxOccurs="1" minOccurs="1"/>
+        <xsd:element name="Attributes" type="cmn:AttributeListType" maxOccurs="1" minOccurs="0"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="getSerailProcessResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="TransactionHeader" maxOccurs="1" minOccurs="1" type="cmn:TransactionHeaderType"/>
+        <xsd:element name="SerialDetails" maxOccurs="1" minOccurs="1" type="tns:SerialListType"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="SerialListType">
+    <xsd:sequence>
+      <xsd:element name="Serial" type="tns:SerialType" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SerialType">
+    <xsd:sequence>
+      <xsd:element name="Whse" type="xsd:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element name="Item" type="xsd:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element name="SerialNum" type="xsd:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element name="SerialStatus" type="xsd:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element name="Subinv" type="xsd:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element name="Locator" type="xsd:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xsd:element name="Attributes" type="cmn:AttributeListType" maxOccurs="1" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

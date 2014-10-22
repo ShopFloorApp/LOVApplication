@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="12.1.3.2.36" id="LotDetails"
+          Package="dcoms.mobile.LotWS.process_Result" BeanClass="dcoms.mobile.LotWS.process_Result.LotDetails"
+          isJavaBased="false">
+  <AccessorAttribute id="Lot" IsCollection="true" BeanClass="dcoms.mobile.LotWS.process_Result.LotDetails.Lot"
+                     CollectionBeanClass="dcoms.mobile.LotWS.process_Result.LotDetails_Operations"/>
+</JavaBean>

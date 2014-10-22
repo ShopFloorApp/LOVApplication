@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-mobile-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.0">
+  <task-flow-definition id="LovFeature-task-flow">
+    <default-activity>LovPage</default-activity>
+    <view id="SerialNumberLov">
+      <page>/SerialNumberLov/SerialNumberLov.amx</page>
+    </view>
+    <view id="ItemLovPG">
+      <page>/ItemLov/ItemLovPG.amx</page>
+    </view>
+    <view id="WarehouseLovPG">
+      <page>/WarehouseLov/WarehouseLovPG.amx</page>
+    </view>
+    <view id="SubinvLovPG">
+      <page>/SubinvLov/SubinvLovPG.amx</page>
+    </view>
+    <view id="LocatorLovPG">
+      <page>/LocatorLov/LocatorLovPG.amx</page>
+    </view>
+    <view id="LovPage">
+      <page>/LovPage.amx</page>
+    </view>
+    <view id="LotLovPG">
+      <page>/LotLovPG.amx</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>LovPage</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>Locator</from-outcome>
+        <to-activity-id>LocatorLovPG</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>Item</from-outcome>
+        <to-activity-id>ItemLovPG</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__4">
+        <from-outcome>Serial</from-outcome>
+        <to-activity-id>SerialNumberLov</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>Warehouse</from-outcome>
+        <to-activity-id>WarehouseLovPG</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__6">
+        <from-outcome>Subinventory</from-outcome>
+        <to-activity-id>SubinvLovPG</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__8">
+        <from-outcome>Lot</from-outcome>
+        <to-activity-id>LotLovPG</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-mobile-config>

@@ -1,0 +1,17 @@
+CREATE TABLE ITEM (ITEM_NUM VARCHAR2(40), ITEM_DESC VARCHAR2(200), ORGANIZATION_ID NUMBER );
+CREATE TABLE WAREHOUSE_DETAILS(org_code VARCHAR2(240), org_name varchar2(3200), address varchar2(3200));
+CREATE TABLE SUBINV(subinv_code VARCHAR2(240), subinv_desc varchar2(3200), org_id Number);
+CREATE TABLE LOCATORS(locator_name varchar2(240), locator_desc varchar2(240));
+INSERT INTO ITEM (ITEM_NUM, ITEM_DESC, ORGANIZATION_ID) VALUES ('200003', 'Widget Subassembly Item',88);
+INSERT INTO ITEM (ITEM_NUM, ITEM_DESC, ORGANIZATION_ID) VALUES ('53FT_TRAILERS','53FT_TRAILERS',101);
+INSERT INTO ITEM (ITEM_NUM, ITEM_DESC, ORGANIZATION_ID) VALUES ('10000007','BLUE 3x3x3 INCH FINISHED GOOD WIDGET',101);
+INSERT INTO WAREHOUSE_DETAILS (org_code, org_name, address) VALUES ('A01', 'Melville','AA01');
+INSERT INTO WAREHOUSE_DETAILS (org_code, org_name, address) VALUES ('A02','Chicago','AA02');
+INSERT INTO WAREHOUSE_DETAILS (org_code, org_name, address) VALUES ('A03','New York','AA03');
+INSERT INTO SUBINV (subinv_code, subinv_desc, subinv_desc) VALUES('FG','Finished Goods',1);
+INSERT INTO SUBINV (subinv_code, subinv_desc, subinv_desc) VALUES('RAW','Raw Material',1);
+INSERT INTO SUBINV (subinv_code, subinv_desc, subinv_desc) VALUES('STG','Staging',1);
+INSERT INTO LOCATORS(locator_name,locator_desc) VALUES('FG.01.01', 'Finished Goods');
+INSERT INTO LOCATORS(locator_name,locator_desc) VALUES('RAW.01.01', 'Raw Material');
+INSERT INTO LOCATORS(locator_name,locator_desc) VALUES('STG.01.01', 'Staging');
+COMMIT;

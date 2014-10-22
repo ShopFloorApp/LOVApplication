@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions name="DCOMGetItemBPEL" targetNamespace="http://www.deloitte.com/DCOM/Common/DCOMGetItem/DCOMGetItemBPEL" xmlns:ns1="http://www.deloitte.com/DCOM/Common/ItemLOV" xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:client="http://www.deloitte.com/DCOM/Common/DCOMGetItem/DCOMGetItemBPEL" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:documentation>
+    <abstractWSDL>http://USSLTCSNL3303.solutions.glbsnet.com:8001/soa-infra/services/DCOMFY14/DCOMGetItem!1.0/DCOMGetItemBPEL.wsdl</abstractWSDL>
+  </wsdl:documentation>
+  <plnk:partnerLinkType name="DCOMGetItemBPEL">
+    <plnk:role name="DCOMGetItemBPELProvider">
+      <plnk:portType name="client:DCOMGetItemBPEL"/>
+    </plnk:role>
+  </plnk:partnerLinkType>
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://www.deloitte.com/DCOM/Common/ItemLOV" schemaLocation="DCOMGetItem.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="DCOMGetItemBPELRequestMessage">
+    <wsdl:part name="payload" element="ns1:getItem"/>
+  </wsdl:message>
+  <wsdl:message name="DCOMGetItemBPELResponseMessage">
+    <wsdl:part name="payload" element="ns1:getItemResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="DCOMGetItemBPEL">
+    <wsdl:operation name="process">
+      <wsdl:input message="client:DCOMGetItemBPELRequestMessage"/>
+      <wsdl:output message="client:DCOMGetItemBPELResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DCOMGetItemBPELBinding" type="client:DCOMGetItemBPEL">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="process">
+      <soap:operation style="document" soapAction="process"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="dcomgetitembpel_client_ep">
+    <wsdl:port name="DCOMGetItemBPEL_pt" binding="client:DCOMGetItemBPELBinding">
+      <soap:address location="http://localhost:7101/DcomsLovApplication-ViewController-context-root/ItemWSService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

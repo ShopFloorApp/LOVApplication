@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="12.1.3.2.36" id="process" Package="LotWS.Types"
+          BeanClass="LotWS.Types.process" isJavaBased="false">
+  <AccessorAttribute id="payload" IsCollection="false" BeanClass="LotWS.Types.process.payload"/>
+</JavaBean>

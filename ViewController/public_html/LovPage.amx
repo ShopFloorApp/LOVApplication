@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+    <amx:panelPage id="pp1">
+        <amx:facet name="header">
+            <amx:outputText value="Header" id="ot1"/>
+        </amx:facet>
+        <amx:facet name="primary">
+            <amx:commandButton id="cb1"/>
+        </amx:facet>
+        <amx:facet name="secondary">
+            <amx:commandButton id="cb2"/>
+        </amx:facet>
+        <amx:commandButton id="cb3" text="Locator" action="Locator"/>
+        <amx:commandButton id="cb4" text="Item" action="Item"/>
+        <amx:commandButton id="cb5" text="Serial" action="Serial"/>
+        <amx:commandButton id="cb6" text="Subinv" action="Subinventory"/>
+        <amx:commandButton id="cb7" text="Warehouse" action="Warehouse"/>
+        <amx:commandButton id="cb8" text="Lot" action="Lot"/>
+    </amx:panelPage>
+</amx:view>

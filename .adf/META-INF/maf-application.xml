@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf"
+                   version="1.0" name="DcomsLovApplication" id="com.company.DcomsLovApplication"
+                   appControllerFolder="ApplicationController" listener-class="dcoms.application.LifeCycleListenerImpl">
+  <adfmf:deviceFeatureAccess>
+    <adfmf:deviceNetwork access="true" id="dn1"/>
+  </adfmf:deviceFeatureAccess>
+  <adfmf:featureReference id="LovFeature"/>
+</adfmf:application>

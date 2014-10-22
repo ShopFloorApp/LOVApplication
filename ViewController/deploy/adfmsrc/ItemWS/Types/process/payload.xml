@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="12.1.3.2.36" id="payload"
+          Package="ItemWS.Types.process" BeanClass="ItemWS.Types.process.payload" isJavaBased="false">
+  <Attribute Name="OrganizationId" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="ItemNum" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="Desc" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <AccessorAttribute id="TransactionHeader" IsCollection="false"
+                     BeanClass="ItemWS.Types.process.payload.TransactionHeader"/>
+  <AccessorAttribute id="Attributes" IsCollection="false" BeanClass="ItemWS.Types.process.payload.Attributes"/>
+</JavaBean>

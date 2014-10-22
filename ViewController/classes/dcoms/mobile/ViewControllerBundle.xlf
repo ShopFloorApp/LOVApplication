@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<xliff version="1.1" xmlns="urn:oasis:names:tc:xliff:document:1.1">
+  <file source-language="en" original="dcoms.mobile.ViewControllerBundle" datatype="x-oracle-adf">
+    <body>
+      <trans-unit id="SERIAL_NUMBER">
+        <source>Serial Number</source>
+        <target/>
+        <note>Serial Number</note>
+      </trans-unit>
+      <trans-unit id="HOME">
+        <source>Home</source>
+        <target/>
+        <note>Home Button</note>
+      </trans-unit>
+      <trans-unit id="CANCEL">
+        <source>Cancel</source>
+        <target/>
+        <note>Cancel Button</note>
+      </trans-unit>
+      <trans-unit id="SEARCH_SERIAL_NUMBER">
+        <source>Search Serial Number</source>
+        <target/>
+        <note>Serial Number Search Page</note>
+      </trans-unit>
+      <trans-unit id="SEARCH">
+        <source>Search</source>
+        <target/>
+        <note>Search Button</note>
+      </trans-unit>
+      <trans-unit id="SEARCH_ITEM_NUMBER">
+        <source>SEARCH ITEM NUMBER</source>
+        <target/>
+        <note>search Item Number</note>
+      </trans-unit>
+      <trans-unit id="ITEM_NUMBER">
+        <source>Item Number</source>
+        <target/>
+        <note>item number</note>
+      </trans-unit>
+      <trans-unit id="SEARCH_WAREHOUSE">
+        <source>SEARCH WAREHOUSE</source>
+        <target/>
+        <note>search warehouse</note>
+      </trans-unit>
+      <trans-unit id="ORGANIZATION_CODE">
+        <source>Organization Code</source>
+        <target/>
+        <note>Organization Code</note>
+      </trans-unit>
+      <trans-unit id="SEARCH_SUBINVENTORY">
+        <source>SEARCH SUBINVENTORY</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="SUBINVENTORY_CODE">
+        <source>Subinventory Code</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="SEARCH_LOCATOR">
+        <source>SEARCH LOCATOR</source>
+        <target/>
+        <note>search loctaor</note>
+      </trans-unit>
+      <trans-unit id="LOCATOR">
+        <source>Locator</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="SEARCH_LOT_NUMBER">
+        <source>Search Lot Number</source>
+        <target/>
+        <note>Lot Number Search Page</note>
+      </trans-unit>
+      <trans-unit id="LOT__NUMBER">
+        <source>Lot  Number</source>
+        <target/>
+        <note>Lot Number</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

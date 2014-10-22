@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions name="DCOMGetSerialBPELProcess" targetNamespace="http://www.deloitte.com/DCOM/DCOMGetSerial/DCOMGetSerialBPELProcess" xmlns:ns1="http://www.deloitte.com/DCOM/SerialNumber/DCOMGetSerial" xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:client="http://www.deloitte.com/DCOM/DCOMGetSerial/DCOMGetSerialBPELProcess" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:documentation>
+    <abstractWSDL>http://10.118.20.255:8001/soa-infra/services/DCOMFY14/DCOMGetSerial!1.0/DCOMGetSerialBPELProcess.wsdl</abstractWSDL>
+  </wsdl:documentation>
+  <plnk:partnerLinkType name="DCOMGetSerialBPELProcess">
+    <plnk:role name="DCOMGetSerialBPELProcessProvider">
+      <plnk:portType name="client:DCOMGetSerialBPELProcess"/>
+    </plnk:role>
+  </plnk:partnerLinkType>
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://www.deloitte.com/DCOM/SerialNumber/DCOMGetSerial" schemaLocation="DCOMGetSerial.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="DCOMGetSerialBPELProcessRequestMessage">
+    <wsdl:part name="payload" element="ns1:getSerialProcess"/>
+  </wsdl:message>
+  <wsdl:message name="DCOMGetSerialBPELProcessResponseMessage">
+    <wsdl:part name="payload" element="ns1:getSerailProcessResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="DCOMGetSerialBPELProcess">
+    <wsdl:operation name="process">
+      <wsdl:input message="client:DCOMGetSerialBPELProcessRequestMessage"/>
+      <wsdl:output message="client:DCOMGetSerialBPELProcessResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DCOMGetSerialBPELProcessBinding" type="client:DCOMGetSerialBPELProcess">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="process">
+      <soap:operation style="document" soapAction="process"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="dcomgetserialbpelprocess_client_ep">
+    <wsdl:port name="DCOMGetSerialBPELProcess_pt" binding="client:DCOMGetSerialBPELProcessBinding">
+      <soap:address location="http://localhost:7101/DcomsLovApplication-ViewController-context-root/DCOMGetSerialWSService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

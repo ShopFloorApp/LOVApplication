@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.1.3.9.1" id="DataBindings"
+             SeparateXMLFiles="false" Package="dcoms.mobile" ClientType="Generic">
+  <pageMap>
+    <page path="/SerialNumberLov/SerialNumberLov.amx" usageId="dcoms_mobile_SerialNumberLovPageDef"/>
+    <page path="/ItemLov/ItemLovPG.amx" usageId="dcoms_mobile_ItemLovPGPageDef"/>
+    <page path="/WarehouseLov/WarehouseLovPG.amx" usageId="dcoms_mobile_WarehouseLovPGPageDef"/>
+    <page path="/SubinvLov/SubinvLovPG.amx" usageId="dcoms_mobile_SubinvLovPGPageDef"/>
+    <page path="/LocatorLov/LocatorLovPG.amx" usageId="dcoms_mobile_LocatorLovPGPageDef"/>
+    <page path="/LotLovPG.amx" usageId="dcoms_mobile_LotLovPGPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="dcoms_mobile_SerialNumberLovPageDef" path="SerialNumberLov.SerialNumberLovPageDef"/>
+    <page id="dcoms_mobile_ItemLovPGPageDef" path="ItemLov.ItemLovPGPageDef"/>
+    <page id="dcoms_mobile_WarehouseLovPGPageDef" path="WarehouseLov.WarehouseLovPGPageDef"/>
+    <page id="dcoms_mobile_SubinvLovPGPageDef" path="SubinvLov.SubinvLovPGPageDef"/>
+    <page id="dcoms_mobile_LocatorLovPGPageDef" path="LocatorLov.LocatorLovPGPageDef"/>
+    <page id="dcoms_mobile_LotLovPGPageDef" path="dcoms.mobile.pageDefs.LotLovPGPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="LotLovDC" path="dcoms.mobile.LotLovDC"/>
+    <dc id="LocatorLovDC" path="dcoms.mobile.LocatorLovDC"/>
+    <dc id="SubinvLovDC" path="dcoms.mobile.SubinvLovDC"/>
+    <dc id="WarehouseLovDC" path="dcoms.mobile.WarehouseLovDC"/>
+    <dc id="ItemLovDC" path="dcoms.mobile.ItemLovDC"/>
+    <dc id="SerialLovDC" path="dcoms.mobile.SerialLovDC"/>
+    <dc id="DCOMGetSerialWS" path="dcoms.mobile.DCOMGetSerialWS"/>
+    <dc id="ItemWS" path="dcoms.mobile.DCOMGetSerialWS"/>
+  </dataControlUsages>
+</Application>

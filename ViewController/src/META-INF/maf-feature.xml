@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:features xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf">
+  <adfmf:feature id="LovFeature" name="LovFeature">
+    <adfmf:content id="LovFeature.1">
+      <adfmf:amx file="LovFeature/LovFeature-task-flow.xml#LovFeature-task-flow"/>
+    </adfmf:content>
+    <adfmf:deviceFeatureAccess>
+      <adfmf:deviceNetwork access="true" id="dn1"/>
+    </adfmf:deviceFeatureAccess>
+  </adfmf:feature>
+</adfmf:features>

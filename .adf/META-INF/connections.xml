@@ -1,0 +1,84 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="DCOMGetSerialWS" className="oracle.adf.model.connection.webservice.impl.WebServiceConnectionImpl"
+             xmlns="">
+    <Factory className="oracle.adf.model.connection.webservice.api.WebServiceConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="WebServiceConnection">
+        <Contents>
+          <wsconnection description="http://10.118.20.255:8001/soa-infra/services/DCOMFY14/DCOMGetSerial/dcomgetserialbpelprocess_client_ep?WSDL"
+                        service="{http://www.deloitte.com/DCOM/DCOMGetSerial/DCOMGetSerialBPELProcess}dcomgetserialbpelprocess_client_ep">
+            <model name="{http://www.deloitte.com/DCOM/DCOMGetSerial/DCOMGetSerialBPELProcess}dcomgetserialbpelprocess_client_ep"
+                   xmlns="http://oracle.com/ws/model">
+              <service name="{http://www.deloitte.com/DCOM/DCOMGetSerial/DCOMGetSerialBPELProcess}dcomgetserialbpelprocess_client_ep">
+                <port name="DCOMGetSerialBPELProcess_pt"
+                      binding="{http://www.deloitte.com/DCOM/DCOMGetSerial/DCOMGetSerialBPELProcess}DCOMGetSerialBPELProcessBinding">
+                  <soap addressUrl="http://10.118.20.255:8001/soa-infra/services/DCOMFY14/DCOMGetSerial/dcomgetserialbpelprocess_client_ep"
+                        xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                  <operation name="process">
+                    <soap soapAction="process" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                </port>
+              </service>
+            </model>
+          </wsconnection>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+  <Reference name="ItemWS" className="oracle.adf.model.connection.webservice.impl.WebServiceConnectionImpl" xmlns="">
+    <Factory className="oracle.adf.model.connection.webservice.api.WebServiceConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="WebServiceConnection">
+        <Contents>
+          <wsconnection description="http://10.118.20.255:8001/soa-infra/services/DCOMFY14/DCOMGetItem/dcomgetitembpel_client_ep?WSDL"
+                        service="{http://www.deloitte.com/DCOM/Common/DCOMGetItem/DCOMGetItemBPEL}dcomgetitembpel_client_ep">
+            <model name="{http://www.deloitte.com/DCOM/Common/DCOMGetItem/DCOMGetItemBPEL}dcomgetitembpel_client_ep"
+                   xmlns="http://oracle.com/ws/model">
+              <service name="{http://www.deloitte.com/DCOM/Common/DCOMGetItem/DCOMGetItemBPEL}dcomgetitembpel_client_ep">
+                <port name="DCOMGetItemBPEL_pt"
+                      binding="{http://www.deloitte.com/DCOM/Common/DCOMGetItem/DCOMGetItemBPEL}DCOMGetItemBPELBinding">
+                  <soap addressUrl="http://10.118.20.255:8001/soa-infra/services/DCOMFY14/DCOMGetItem/dcomgetitembpel_client_ep"
+                        xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                  <operation name="process">
+                    <soap soapAction="process" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                </port>
+              </service>
+            </model>
+          </wsconnection>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+  <Reference name="LotWS" className="oracle.adf.model.connection.webservice.impl.WebServiceConnectionImpl" xmlns="">
+    <Factory className="oracle.adf.model.connection.webservice.api.WebServiceConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="WebServiceConnection">
+        <Contents>
+          <wsconnection description="http://10.118.20.255:8001/soa-infra/services/DCOMFY14/DCOMGetLot/dcomgetlotbpelprocess_client_ep?WSDL"
+                        service="{http://www.deloitte.com/DCOM/DCOMGetLot/DCOMGetLotBPELProcess}dcomgetlotbpelprocess_client_ep">
+            <model name="{http://www.deloitte.com/DCOM/DCOMGetLot/DCOMGetLotBPELProcess}dcomgetlotbpelprocess_client_ep"
+                   xmlns="http://oracle.com/ws/model">
+              <service name="{http://www.deloitte.com/DCOM/DCOMGetLot/DCOMGetLotBPELProcess}dcomgetlotbpelprocess_client_ep">
+                <port name="DCOMGetLotBPELProcess_pt"
+                      binding="{http://www.deloitte.com/DCOM/DCOMGetLot/DCOMGetLotBPELProcess}DCOMGetLotBPELProcessBinding">
+                  <soap addressUrl="http://10.118.20.255:8001/soa-infra/services/DCOMFY14/DCOMGetLot/dcomgetlotbpelprocess_client_ep"
+                        xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                  <operation name="process">
+                    <soap soapAction="process" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                </port>
+              </service>
+            </model>
+          </wsconnection>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+</References>
